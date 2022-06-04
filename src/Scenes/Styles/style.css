@@ -1,0 +1,425 @@
+:root {
+  --first-color: #1b1b1b;
+  --second-color: #333333;
+  --third-color: #292929;
+  --font-color: #d6d5db;
+  --button-color: #42dbdc;
+}
+/*
+* ==========================================================
+*             Login & register pages
+* ==========================================================
+*/
+* {
+  box-sizing: border-box;
+}
+.background {
+  background: url(../../Images/bg.jpeg);
+  /* background-image: 1024 * 74; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.container {
+  max-width: 1170px;
+  margin-right: auto;
+}
+.wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 75%;
+  padding: 0 20px;
+}
+.form-holder {
+  max-width: 975px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 5px;
+}
+.form-holder .info {
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.form-holder div[class*="col-"] {
+  padding: 0;
+}
+
+.form-holder .info {
+  background: rgba(219, 101, 116, 0.95);
+  color: var(--second-color);
+  font-size: calc(9px + 1.8vw);
+}
+.form-holder .info p {
+  margin-top: 2px;
+  color: var(--font-color);
+  font-size: 10px;
+}
+@media screen and (min-width: 601px) {
+  .form-holder .info h1 {
+    font-size: calc(12px + 1.8vw);
+    font-weight: 500;
+  }
+  .form-holder .info p {
+    font-weight: 300;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .form-holder .info h1 {
+    font-size: calc(14px + 1.8vw);
+    font-weight: 500;
+  }
+}
+.form-holder .content {
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.form-holder .content {
+  background: var(--first-color);
+}
+.form-holder .form a.forgot-pass,
+.form-holder .form a.signup,
+.form a.login {
+  font-size: 0.9rem;
+  color: var(--button-color);
+}
+.forgot-pass {
+  color: var(--button-color);
+}
+
+.copyrights {
+  width: 100%;
+  z-index: 9999;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+}
+.anticon-user,
+.anticon-mail,
+.anticon-lock,
+.anticon-eye-invisible {
+  color: #fff;
+}
+.ant-input-password-icon:hover {
+  color: rgb(98, 223, 223);
+}
+.ant-input-affix-wrapper > input.ant-input {
+  color: #fff;
+  background-color: transparent !important;
+}
+@media (max-width: 991px) {
+  .form-holder .info,
+  .form-holder .form {
+    min-height: auto;
+    padding: 40px;
+    height: 100%;
+  }
+}
+.login-form-button {
+  width: 32%;
+  min-width: 50%;
+  max-width: 300%;
+}
+/* Outer layout */
+.fill-window {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.ant-layout {
+  background: transparent !important;
+}
+#components-layout-demo-custom-trigger .trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#components-layout-demo-custom-trigger .trigger:hover {
+  color: #1890ff;
+}
+
+#components-layout-demo-custom-trigger .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* --------------------------------
+        layout - design
+----------------------------------- */
+/* --------header & footer--------- */
+.ant-layout-header {
+  overflow: hidden;
+  background-color: var(--first-color) !important;
+  padding: 10px 5px;
+  color: var(--font-color) !important;
+}
+.ant-layout-footer {
+  /* background: var(--first-color) !important; 
+  padding-left: 3px; */
+  /* height: 50px; */
+}
+.header strong {
+  float: left;
+  color: black;
+  text-align: center;
+  padding-top: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+.logo {
+  font-weight: bold;
+  padding-left: 5px;
+}
+.header-right {
+  float: right;
+}
+.header-right p {
+  float: left;
+  padding: 12px;
+  color: var(--font-color) !important;
+  text-align: center;
+  text-decoration: none;
+  font-size: 19px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+/* -----Button-ant---------- */
+.ant-btn {
+  background-color: var(--button-color);
+  color: black;
+  font-weight: bold !important;
+  border: 2px solid #1e7272;
+  border-radius: 0.35rem;
+  width: 80px;
+  height: 35px;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: -0.55rem 0.75rem;
+  text-align: center;
+  display: inline-block;
+}
+.ant-btn:hover,
+.ant-btn:focus {
+  color: black;
+  background-color: #d13c4f;
+  border-color: #cf3145;
+  box-shadow: 0px 0px 0px 3px #d13c4f;
+}
+/* ----------menu----------- */
+.ant-layout-sider {
+  background: var(--first-color) !important;
+}
+.ant-menu.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-menu.ant-menu-dark .ant-menu-sub {
+  background: var(--first-color) !important;
+}
+/* -----content---------*/
+.content-layout {
+  background: var(--second-color) !important;
+}
+
+/* --------------------------------
+    dashboard - statusblock
+----------------------------------- */
+.statusblock-col {
+  padding-right: 10px;
+  width: 213px;
+}
+.statistic-block {
+  height: 125px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: var(--third-color);
+  color: var(--second-color);
+  margin-right: 15px;
+}
+.statistic-block-title {
+  text-align: center;
+  font-size: calc(5px + 0.5vw);
+}
+.statistic-arrow {
+  width: 20px;
+  height: 30px;
+  margin-top: 8px;
+  margin-left: 30px;
+}
+.statistic-number {
+  padding-left: 20%;
+  font-size: 23px;
+  color: yellowgreen;
+}
+.statistic-block strong {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 13px !important;
+  color: var(--font-color);
+  margin-bottom: -5px !important;
+}
+
+.statistic-block strong,
+.statistic-block span {
+  display: block;
+}
+/* -----progressbar------- */
+.progress-bar {
+  background-color: rgb(19, 204, 204) !important;
+}
+.progress {
+  background-color: transparent !important;
+}
+.progress.progress-template.progress-small {
+  height: 2px;
+}
+.progress-bar.progress-bar-template {
+  height: 4px;
+  border-radius: 30px;
+}
+.progress-bar.progress-bar-template.progress-bar-small {
+  height: 2px;
+}
+/* --------------------------------
+    dashboard - chart
+----------------------------------- */
+.site-card-wrapper {
+  margin-top: 1.15%;
+}
+.ant-card-body {
+  padding: 10px;
+}
+
+.graph-card {
+  background-color: var(--third-color) !important;
+  height: 300px;
+  border: none;
+  border-radius: 0px;
+  width: 500px;
+}
+/* switch */
+.ant-switch {
+  background-color: red;
+}
+.ant-switch-checked {
+  background-color: lime;
+}
+/* --------------------------------
+    dashboard - Report page
+----------------------------------- */
+
+.report-input {
+  padding: 20px 20px 20px 20px;
+  background: var(--third-color) !important;
+  color: var(--second-color);
+}
+.ant-form-item-label > label {
+  color: var(--font-color) !important;
+  height: 40px;
+}
+.ant-picker-input > input {
+  color: var(--font-color) !important;
+}
+.report-element {
+  margin-top: 20px;
+  background: var(--third-color) !important;
+}
+.report-content {
+  padding: 20px 20px 20px 20px;
+}
+.report-content h4,
+.report-content h3 {
+  color: #a89dee !important;
+  text-transform: uppercase;
+}
+.report-content-data label {
+  color: var(--font-color) !important;
+  width: 120px;
+  display: inline-block;
+  text-align: right;
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+.report-content-data div {
+  width: 300px;
+  color: var(--font-color) !important;
+}
+/* ------ant-report------ */
+.ant-table {
+  color: var(--font-color) !important;
+}
+
+.ant-table-thead > tr > th {
+  color: var(--font2-color);
+  text-transform: capitalize;
+  font-weight: 400;
+  font-weight: bold !important;
+  text-align: left;
+  background-color: var(--first-color);
+  border-bottom: 1px solid rgb(82, 79, 79);
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+.ant-table-tbody > tr.ant-table-row:hover > td {
+  background: #39393a;
+  color: var(--font-color);
+}
+.ant-table-tbody > tr > td {
+  color: rgb(192, 196, 201);
+  background: var(--first-color);
+  border-bottom: none;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+.ant-table-tbody > tr:nth-child(2n + 1) > td {
+  background-color: #282b2f;
+}
+.ant-table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-container > div {
+  margin: 3px;
+  text-align: center;
+  line-height: 10px;
+  font-size: 20px;
+}
+
+.flex-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-content > div {
+  margin: 5px;
+  text-align: center;
+  line-height: 15px;
+  font-size: 20px;
+}
